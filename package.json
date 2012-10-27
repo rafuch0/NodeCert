@@ -1,0 +1,17 @@
+{
+  "name": "NodeCert",
+  "description": "Project Description.",
+  "version": "0.0.1",
+  "homepage": "http://#",
+  "author": "You",
+  "private": true,
+  "dependencies":
+  {
+    "socket.io": "= 0.9.7",
+    "pem": "latest"
+  },
+ "engines":
+  {
+    "node": "= 0.6.20"
+  }
+}

@@ -1,0 +1,38 @@
+#wrapper
+{
+	width: 980px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#formArea
+{
+	float: left;
+
+	min-width: 300px;
+}
+
+#newCertArea
+{
+	float: right;
+
+	min-width: 600px;
+}
+
+a
+{
+	font-style: bold;
+}
+
+textarea
+{
+	min-height: 100px;
+	min-width: 400px;
+	font-size: 9px;
+}
+
+input
+{
+
+}

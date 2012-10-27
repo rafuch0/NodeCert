@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>NodeCert</title>
+	<script src="sockio.js"></script>
+	<script src="client.js"></script>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/css.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="formArea">
+			keyBitsize<select id="keyBitsize">
+				<option value="512">512-bit</option>
+				<option value="1024">1024-bit</option>
+				<option value="2048" selected>2048-bit</option>
+				<option value="4096">4096-bit</option>
+				<option value="8192">8192-bit</option>
+			</select><br />
+			days<input type="text" size=4 id="days" value="3650"></input><br />
+			hash<select id="hash">
+				<option value="md5">md5</option>
+				<option value="sha1" selected>sha1</option>
+			</select><br />
+			country<input type="text" size=2 id="country" value="US"></input><br />
+			state<input type="text" size=24 id="state" value="Example State"></input><br />
+			city<input type="text" size=24 id="locality" value="Example City"></input><br />
+			organization<input type="text" size=24 id="organization" value="Example Inc"></input><br />
+			organizationUnit<input type="text" size=24 id="organizationUnit" value="Example Department"></input><br />
+			emailAddress<input type="text" size=24 id="emailAddress" value="admin@example.com"></input><br />
+			commonName<input type="text" size=16 id="commonName" value="example.com"></input><br />
+			<input type="button" id="submit" value="Request Cert"></input> <span id="connectionStatus"><b><span style="color: red;">Disconnected <a href="https://nodecert.example.com:8083/?CLOSE ME" target="_blank">(Second Cert...)</a></span></b></span>
+		</div>
+
+		<div id="newCertArea">
+			<div id="certInfo"></div>
+			<a href="#" id="publicKey">Download publicKey</a><br />
+			<textarea id="publicKeyASC" value="publicKey"></textarea><br />
+			<a href="#" id="serviceKey">Download serviceKey</a><br />
+			<textarea id="serviceKeyASC" value="serviceKey"></textarea><br />
+			<a href="#" id="clientKey">Download clientKey</a><br />
+			<textarea id="clientKeyASC" value="clientKey"></textarea><br />
+			<a href="#" id="certificate">Download certificate</a><br />
+			<textarea id="certificateASC" value="certificate"></textarea><br />
+			<a href="#" id="csr">Download csr</a><br />
+			<textarea id="csrASC" value="csr"></textarea><br />
+			<a href="#" id="pem">Download pem</a><br />
+			<textarea id="pemASC" value="csr"></textarea><br />
+		</div>
+	</div>
+
+	<script>
+		window.onload = initPage;
+	</script>
+</body>
+</html>
